@@ -1,3 +1,9 @@
+```sh
+  # to deploy
+  npx astro build && npx wrangler deploy
+```
+
+
 # Astro Starter Kit: Basics
 
 ```sh
