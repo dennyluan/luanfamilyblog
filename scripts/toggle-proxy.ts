@@ -29,12 +29,12 @@ function toggleAstroAdapter(comment: boolean) {
 
   // Find the import line for netlify adapter (including commented lines)
   const importIndex = astroConfig.findIndex(
-    (line) => line.trim().includes('import') && line.includes('netlify')
+    (line) => line.trim().includes('import') && line.includes('cloudflare')
   )
 
   // Find the adapter line (including commented lines)
   const adapterIndex = astroConfig.findIndex(
-    (line) => line.trim().includes('adapter:') && line.includes('netlify')
+    (line) => line.trim().includes('adapter:') && line.includes('cloudflare')
   )
 
   if (importIndex === -1 || adapterIndex === -1) {
