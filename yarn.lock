@@ -5,6 +5,22 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@astrojs/cloudflare@npm:^12.6.4":
+  version: 12.6.4
+  resolution: "@astrojs/cloudflare@npm:12.6.4"
+  dependencies:
+    "@astrojs/internal-helpers": "npm:0.7.2"
+    "@astrojs/underscore-redirects": "npm:1.0.0"
+    "@cloudflare/workers-types": "npm:^4.20250507.0"
+    tinyglobby: "npm:^0.2.13"
+    vite: "npm:^6.3.5"
+    wrangler: "npm:^4.14.1"
+  peerDependencies:
+    astro: ^5.0.0
+  checksum: 10c0/4617dd83fbb51ecc887a54ab5f767a0e6aeeb7f288801eb0795b3291bc42c64df96c3534e6c1126eaf22edd89089bbb344ceba9966f1c297a5746b89f2df0999
+  languageName: node
+  linkType: hard
+
 "@astrojs/compiler@npm:^2.12.2":
   version: 2.12.2
   resolution: "@astrojs/compiler@npm:2.12.2"
@@ -69,6 +85,13 @@ __metadata:
     is-wsl: "npm:^3.1.0"
     which-pm-runs: "npm:^1.1.0"
   checksum: 10c0/7c575aad221d7335b6b1378ceac0e60a25c9540cdde8f5584b0ffe565d06b3ecfc2217738d1ce55ac13eb66e1a6251453bddf117d7f793e51b3fc7be5d001ea4
+  languageName: node
+  linkType: hard
+
+"@astrojs/underscore-redirects@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@astrojs/underscore-redirects@npm:1.0.0"
+  checksum: 10c0/f2554e1ae0d605b1eca54ffb67269eff6ff58fcdaf34ecd9ba0c0f6751c9e0fdb806c896b6b4e1adb47e291f18d7b7b4dc554334a45c231d5d1da25d73524e8a
   languageName: node
   linkType: hard
 
@@ -172,6 +195,13 @@ __metadata:
   version: 1.20250813.0
   resolution: "@cloudflare/workerd-windows-64@npm:1.20250813.0"
   conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@cloudflare/workers-types@npm:^4.20250507.0":
+  version: 4.20250816.0
+  resolution: "@cloudflare/workers-types@npm:4.20250816.0"
+  checksum: 10c0/497a0cda3f3670c379f9af51989b85f50a1d8e2cbf86f818f425ee05fa9245e49c9ccfbb7b782d5da5274e40fea1467f11e45a233f2e82d93002036e06905835
   languageName: node
   linkType: hard
 
@@ -1402,6 +1432,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "blog@workspace:."
   dependencies:
+    "@astrojs/cloudflare": "npm:^12.6.4"
     astro: "npm:^5.13.2"
     wrangler: "npm:^4.30.0"
   languageName: unknown
@@ -4506,7 +4537,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^6.3.4":
+"vite@npm:^6.3.4, vite@npm:^6.3.5":
   version: 6.3.5
   resolution: "vite@npm:6.3.5"
   dependencies:
@@ -4661,7 +4692,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:^4.30.0":
+"wrangler@npm:^4.14.1, wrangler@npm:^4.30.0":
   version: 4.30.0
   resolution: "wrangler@npm:4.30.0"
   dependencies:
