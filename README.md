@@ -1,13 +1,29 @@
+# Letters to ollie
+
+Hello, this is our family blog. It's built on top of Astro and a specific theme called Chiri.
+
+To create a new post just do
+
+```sh
+pnpm new <title>
+```
+
+Or add your posts to `src/content/posts`.
+
+To deploy, just push to master and make sure that the CI builds. Otherwise if you have wrangler credentials, you can do:
+
 ```sh
   # to deploy
   npx astro build && npx wrangler deploy
 ```
 
+This is finnicky in that it requires `pnpm` as the package manager. Below is the readme for Chiri.
 
-# Astro Starter Kit: Basics
+
+## Astro Starter Kit: Basics
 
 ```sh
-yarn create astro@latest -- --template basics
+pnpm create astro@latest -- --template basics
 ```
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
@@ -40,12 +56,12 @@ All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `yarn install`             | Installs dependencies                            |
-| `yarn dev`             | Starts local dev server at `localhost:4321`      |
-| `yarn build`           | Build your production site to `./dist/`          |
-| `yarn preview`         | Preview your build locally, before deploying     |
-| `yarn astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `yarn astro -- --help` | Get help using the Astro CLI                     |
+| `pnpm install`             | Installs dependencies                            |
+| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm build`           | Build your production site to `./dist/`          |
+| `pnpm preview`         | Preview your build locally, before deploying     |
+| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
 ## 👀 Want to learn more?
 
