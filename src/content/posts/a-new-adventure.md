@@ -67,7 +67,7 @@ The last reason is the most important and tangible, and it's that I want to give
 I want to embed them in your brain, so that you can recall them later in your life. The humidity, the cicadas buzzing, the waft of sinky tofu, the busses and moped squeeks, the crowded subways, the tasty food, the hot sun, the sitting around and playing with family members whose names and faces you'll eventually forget. If everything above that I've said ends up not coming true, at least this one will always be true.
 
 
-![Yesterday, after a long 9-hr flight from Honolulu to Fukuoka and finally Taipei, you met your 88 year old great grandma. Baba is fixing the TV in the back.](./_assets/azao.jpg)
+![Yesterday, after a long 9-hr flight from Honolulu to Fukuoka and finally Taipei, you met your 88 year old great grandma. Baba is fixing the TV in the back.](./_assets/grandma.jpg)
 
 
 Anyways, all of this is certainly risky. I have no idea how it's going to turn out. Maybe we'll get there and decide it's too much, or it's not for us, or we get homesick. It will be an immense challenge in so many ways, basically starting from scratch again. But it's one that we're looking forward to. Thanks for coming along with us baby boy.
