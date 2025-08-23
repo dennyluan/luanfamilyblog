@@ -96,7 +96,7 @@ export default defineConfig({
 
 ## Preview of Some Features
 
-![Theme Toggle](./_assets/theme-toggle.png)
+<!-- ![Theme Toggle](./_assets/theme-toggle.png)
 
 ![Dotted Divider](./_assets/dotted-divider.png)
 
@@ -107,3 +107,4 @@ export default defineConfig({
 ![Reading Time](./_assets/reading-time.png)
 
 ![Copy Code](./_assets/copy-code.png)
+ -->

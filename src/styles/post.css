@@ -32,6 +32,11 @@
   margin: 3.75em 0 1.75em 0;
 }
 
+.prose h2 {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
 /* Bold text */
 .prose strong,
 .prose b {
