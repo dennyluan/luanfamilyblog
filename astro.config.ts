@@ -20,7 +20,7 @@ export default defineConfig({
   adapter: cloudflare({
     imageService: "passthrough",
     platformProxy: {
-      enabled: true,
+      enabled: true
     },
   }), // Set adapter for deployment, or set `linkCard` to `false` in `src/config.ts`
   site: themeConfig.site.website,
