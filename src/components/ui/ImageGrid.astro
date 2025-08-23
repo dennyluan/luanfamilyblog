@@ -1,0 +1,21 @@
+---
+import { Image, Picture } from 'astro:assets'
+const images = Astro.props.images;
+
+---
+<div id="image-grid" class="image">
+  {
+    images.map((image, index)=> {
+      return (
+        <Picture
+          src={image}
+          data-preview=true alt=""
+          formats={['avif', 'webp']}
+          layout='constrained'
+          width={200}
+          height={200}
+        />
+      )
+    })
+  }
+</div>
