@@ -38,6 +38,7 @@ const postSlug = Astro.url.pathname.split('/').filter(Boolean).pop() || ''
   <div class="post-container">
     <main>
       <div class="prose">
+        <GradientMask />
         <BackButton />
         {themeConfig.post.toc && <TableOfContents toc={toc} />}
         <div class="title">
@@ -58,11 +59,11 @@ const postSlug = Astro.url.pathname.split('/').filter(Boolean).pop() || ''
       </div>
     </main>
     <ImageOptimizer />
-    <!-- <FootnoteScroll /> -->
-    <!-- <CopyCode /> -->
-    <!-- <GitHubCard /> -->
-    <!-- <XPOST /> -->
-    <!-- <NeoDBCard /> -->
+    <FootnoteScroll />
+    <CopyCode />
+    <GitHubCard />
+    <XPOST />
+    <NeoDBCard />
     {themeConfig.post.imageViewer && <ImageViewer />}
     <!-- {themeConfig.post.linkCard && <LinkCard />} -->
     {themeConfig.general.footer && <Footer />}
