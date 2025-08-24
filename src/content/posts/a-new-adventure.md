@@ -32,18 +32,18 @@ We've found a great community for you in Honolulu, and for that we are very grat
 
 But, there would still be *something* missing, a hole that couldn't be filled. Living in a happy bubble with so much tumultuous change happening right outside of it, although insulated and safe from it, is not quite the toolkit that I want to equip you with before you step into the tall grass wilderness by yourself. Eventually those changes will hit Hawaii, just as it will the rest of the world.
 
-Maybe leaving China is a trade-off, of comfort on an island away from the storm in your early years, and instead being able to navigate the world confidently later in your life.
+Maybe leaving for China is a trade-off, of comfort on an island away from the storm in your early years, and instead being able to navigate the world confidently later in your life.
 
 
 ## 3. Fear of missing out
 
 The future of the world will be in China's collective hands. There is too much happening there to ignore. I've known this would be eventually true since I was a kid, and it felt like I was always watching and waiting for it to finally happen, where China's present would catch up to it's future potential. Well, it's happening, and I think it's happening right now.
 
-In college, I always dreamt that I would eventually try to strike out for Shanghai and spend some time there working. Instead, I met your Mama and we started a company together. For a long time, I only vaguely watched the growth from afar, but that changed dramatically over the past 5 years as it became something that I could no longer ignore.
+In college, I always dreamt that I would eventually try to strike out for Shanghai and spend some time there working. Instead, I met your Mama and we started a company together, which lead us on a decade long adventure. For that long time, I only vaguely watched the growth from afar, but that changed dramatically over the past 5 years as it became something that I could no longer ignore.
 
 China just became the single greatest producer of science and technology, with 8 of the top 10 research producing institutions in the world now based in China. I believe this trend is permanent. America will still be a very important place for innovation and a certain kind of progress, but it's not even about any single particular niche, industry, or measure of progress. I could talk about electric cars, high speed trains, clean energy, AI, video games, movies, etc. But it's not about any of that - it's about the spirit.
 
-When your Mama and I first entered Silicon Valley in 2012 to start our first company, we were only 21 years old. There was something electric in the air that infected us, that made it so that two clueless and naive, but deadly ambitious kids were filled with the feeling that we couldn't fail. We musn't fail. Failure wasn't an option, it was a necessity to iterate and keep improving until we succeeded. Partly because the mission that we were working on was that important to us, and that everyone around us felt that same electric buzz. It was Silicon Valley's true source of power, one that made it feel like everyone was collectively moving towards a brighter and better future for humanity. Older and more mature now, I know now how much of it was our naivete, but it was still undeniably a real phenomena.
+When your Mama and I first entered Silicon Valley in 2012 to start our first company, we were only 21 years old. There was something electric in the air that infected us, that made it so that two clueless and naive, but deadly ambitious kids were filled with the feeling that we couldn't fail. We musn't fail. Failure wasn't an option, it was a necessity to iterate and keep improving until we succeeded. Partly because the mission that we were working on was that important to us, and that everyone around us felt that same electric buzz. It was Silicon Valley's true source of power, one that made it feel like everyone was collectively moving towards a brighter and better future for humanity. Older and more mature now, I know now how much of it was our naivete in a world we didn't fully understand, but it was still undeniably a real phenomena.
 
 I haven't felt that feeling about the tech industry in the U.S. for many years now. Crypto, AI, and whatever next bubble comes are all uninspiring and feel like dead end attempts to squeeze the last bit of life out of the real builders who haven't already left. But I feel this positive buzz again whenever I'm in China. So, we're headed there to go look for it, and to find the source.
 
@@ -58,7 +58,7 @@ America is currently broken, and in my opinion, it is unsalvageable. The ultimat
 
 I definitely do not think China is currently perfect, or that it will remain a better alternative forever. But I know enough Chinese history to see where it is going, and as long as China remains a high-trust society, I think it will be a safer bet for us as a family.
 
-So as long as I am working towards a goal or building something, I want the impact of it to be towards a system that I ultimately believe in. And right now, I currently do not believe that doing so in America is a net positive.
+So as long as I am working towards a goal or building something, I want the impact of it to be towards a system that I ultimately believe in. And right now, I do not believe that doing so in America is a net positive.
 
 ## 5. Smells & sounds
 
@@ -70,4 +70,4 @@ I want to embed them in your brain, so that you can recall them later in your li
 ![Yesterday, after a long 9-hr flight from Honolulu to Fukuoka and finally Taipei, you met your 88 year old great grandma. Baba is fixing the TV in the back.](./_assets/grandma.jpg)
 
 
-Anyways, all of this is certainly risky. I have no idea how it's going to turn out. Maybe we'll get there and decide it's too much, or it's not for us, or we get homesick. It will be an immense challenge in so many ways, basically starting from scratch again. But it's one that we're looking forward to. Thanks for coming along with us baby boy.
+Anyways, all of this is certainly risky and to be honest, I have no idea how it's going to turn out. Maybe we'll get there and decide it's too much, or it's not for us, or we'll get homesick. It will be an immense challenge in so many ways, basically starting from scratch again. But it's one that we're looking forward to. Thanks for coming along with us baby boy.
