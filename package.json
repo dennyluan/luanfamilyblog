@@ -53,7 +53,7 @@
     "tsx": "^4.20.3",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.39.1",
-    "wrangler": "^4.30.0"
+    "wrangler": "^4.32.0"
   },
   "packageManager": "pnpm@9.3.0+sha1.d4f1da7af76dbdb4ab1a08f6b5add602ffad6fd4"
 }
