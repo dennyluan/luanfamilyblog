@@ -1,0 +1,218 @@
+---
+import ImageViewer from '@/components/ui/ImageViewer.astro'
+---
+<script>
+  async function fetchR2BucketContents() {
+    const loadingEl = document.getElementById('loading');
+    const errorEl = document.getElementById('error');
+    const resultsEl = document.getElementById('results');
+    const objectListEl = document.getElementById('object-list');
+
+    try {
+      // Make request through Astro API endpoint to avoid CORS
+      const response = await fetch('/api/r2-proxy', {
+        method: 'GET'
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      // Get XML response text
+      const xmlText = await response.text();
+      
+      // Parse XML
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+      
+      // Check for parsing errors
+      const parserError = xmlDoc.querySelector('parsererror');
+      if (parserError) {
+        throw new Error('Failed to parse XML response');
+      }
+
+      // Extract Contents elements
+      const contents = xmlDoc.querySelectorAll('Contents');
+      const objects = [];
+
+      // Parse each object
+      contents.forEach(content => {
+        const keyEl = content.querySelector('Key');
+        const lastModifiedEl = content.querySelector('LastModified');
+        
+        if (keyEl && lastModifiedEl) {
+          objects.push({
+            key: keyEl.textContent,
+            date: lastModifiedEl.textContent
+          });
+        }
+      });
+
+      // Sort by lastModified date (most recent first)
+      objects.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      // Display results
+      loadingEl.style.display = 'none';
+      resultsEl.style.display = 'block';
+
+      // Clear existing list items
+      objectListEl.innerHTML = '';
+
+      // Add sorted objects to the list
+        // <img src="http://assets.luan.family/${obj.key}" height=80 width=160 style='transform: rotate(90deg)'/>
+
+      objects.forEach(obj => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+
+          <img src="http://assets.luan.family/${obj.key}"
+            alt=""
+            height=120
+            data-preview=true
+            layout='constrained'
+            class="image"
+            style="border-radius: 3px;"
+            />
+
+          <br/>
+          ${new Date(obj.date).toLocaleDateString({},{timeZone:"UTC",month:"long", day:"2-digit", year:"numeric"})}
+        `;
+        li.style.marginBottom = '10px';
+        objectListEl.appendChild(li);
+      });
+      
+      console.log('R2 Objects:', objects);
+
+    } catch (error) {
+      console.error('Error fetching R2 bucket contents:', error);
+      loadingEl.style.display = 'none';
+      errorEl.style.display = 'block';
+      errorEl.textContent = `Error: ${error.message}`;
+    }
+  }
+
+  // Wait for document to be ready, then fetch bucket contents
+  document.addEventListener('DOMContentLoaded', fetchR2BucketContents);
+</script>
+
+
+<ImageViewer/>
+<div id="r2-bucket-container">
+  <div id="loading" style="color: #ccc">Loading images...</div>
+  <div id="error" style="display: none; color: red;"></div>
+  <div id="results" style="display: none;">
+    <ul id="object-list"></ul>
+  </div>
+</div>
+
+<style>
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  li {
+    background-color: red;
+  }
+
+  a {
+    color: var(--text-primary);
+    display: block;
+    text-decoration: none;
+    transition: all 0.15s ease-out;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    ul:hover a {
+      opacity: 0.4;
+    }
+
+    ul:hover a:hover {
+      opacity: 1;
+    }
+
+    ul:hover a:hover .divider {
+      background-color: var(--text-tertiary);
+      opacity: 0.75;
+    }
+    ul:hover a:hover .dotted-divider {
+      color: var(--text-secondary);
+    }
+    ul:hover a:hover .date {
+      color: var(--text-secondary);
+      opacity: 1;
+    }
+  }
+
+  .post-item {
+    height: 2.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .post-item.date-left {
+    justify-content: flex-start;
+  }
+
+  .post-item.date-left .title {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .post-item.date-left .date {
+    margin-right: 0.75rem;
+  }
+
+  .title {
+    margin: 0;
+    flex-shrink: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .date {
+    margin: 0;
+    color: var(--text-secondary);
+    opacity: 0.75;
+    letter-spacing: var(--spacing-s);
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .divider {
+    flex: 1 1 auto;
+    min-width: 3rem;
+    margin: 0 0.25rem;
+    height: 0.5px;
+    background-color: var(--border);
+  }
+
+  .dotted-divider {
+    flex: 1 1 3rem;
+    min-width: 3rem;
+    max-width: 100%;
+    text-align: end;
+    letter-spacing: 5px;
+    height: 1.675rem;
+    overflow: hidden;
+    color: var(--text-tertiary);
+    opacity: 0.75;
+  }
+
+  .dotted-divider::after {
+    content: '·····························································································································································';
+    pointer-events: none;
+  }
+
+  .placeholder {
+    height: 3rem;
+  }
+</style>
