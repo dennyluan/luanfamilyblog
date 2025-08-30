@@ -62,7 +62,7 @@ async function createAwsSignature({ method, url, accessKey, secretKey, region, s
   const query = urlObj.search.slice(1) || '';
 
   const now = new Date();
-  const amzDate = now.toISOString().replace(/[:\-]|\.\d{3}/g, '');
+  const amzDate = now.toISOString().replace(/[:-]|\.\d{3}/g, '');
   const dateStamp = amzDate.slice(0, 8);
 
   // Step 1: Create canonical request
