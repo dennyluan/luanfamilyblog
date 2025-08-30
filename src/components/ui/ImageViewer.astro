@@ -10,9 +10,9 @@
     if (!viewer || !viewerImg || viewerImg.tagName !== 'IMG') return
 
     // Display image in fullscreen viewer overlay
-    function showImage(src: string, alt?: string) {
+    function showImage(src: string, alt?: string, ogSrc: string) {
       if (viewerImg && src) {
-        viewerImg.src = src
+        viewerImg.src = ogSrc || src
         viewerImg.alt = alt || ''
       }
       // Show visibility first
@@ -53,13 +53,15 @@
     // Bind click events to images with data-preview="true" attribute
     function bindImageClickEvents() {
       const previewImages = document.querySelectorAll('img[data-preview="true"]')
+
       previewImages.forEach((img) => {
         const imgElement = img as HTMLImageElement
+        const realSrc = img.dataset.source || ''
         imgElement.style.cursor = 'zoom-in'
         imgElement.addEventListener('click', (e) => {
           e.preventDefault()
           const target = e.target as HTMLImageElement
-          showImage(target.src, target.alt || '')
+          showImage(target.src, target.alt || '', realSrc)
         })
       })
     }

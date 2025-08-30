@@ -62,15 +62,22 @@ import ImageViewer from '@/components/ui/ImageViewer.astro'
         // <img src="http://assets.luan.family/${obj.key}" height=80 width=160 style='transform: rotate(90deg)'/>
         // ${new Date(obj.date).toLocaleDateString({},{timeZone:"UTC",month:"long", day:"2-digit", year:"numeric"})}
 
+        // og image
+        // http://assets.luan.family/${obj.key}
+
+        // tranformed
+        // https://assets.luan.family/cdn-cgi/image/width=280,quality=75/export-0001668.jpg
 
       objects.forEach(obj => {
         const li = document.createElement('li');
+        const src =  `https://assets.luan.family/cdn-cgi/image/width=600,quality=100,format=webp/${obj.key}`
         li.innerHTML = `
 
-          <img src="http://assets.luan.family/${obj.key}"
+          <img src="https://assets.luan.family/cdn-cgi/image/width=280,quality=75,format=webp/${obj.key}"
             alt=""
             height=120
             data-preview=true
+            data-source="${src}"
             layout='constrained'
             class="image"
             style="border-radius: 3px;"
@@ -114,6 +121,8 @@ import ImageViewer from '@/components/ui/ImageViewer.astro'
     display: flex;
     flex-direction: row;
     gap: 10px;
+    flex-wrap: wrap;
+    height: auto;
   }
 
   a {
