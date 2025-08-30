@@ -23,6 +23,9 @@ const { title, pubDate, readingTime, toc } = Astro.props as PostLayoutProps
 
 const postSlug = Astro.url.pathname.split('/').filter(Boolean).pop() || ''
 
+console.log("title", title)
+console.log("pubDate", pubDate)
+
 ---
 
 <BaseLayout

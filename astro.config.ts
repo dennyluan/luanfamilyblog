@@ -23,12 +23,21 @@ export default defineConfig({
       enabled: true
     },
   }), // Set adapter for deployment, or set `linkCard` to `false` in `src/config.ts`
+  // output: 'server',
   site: themeConfig.site.website,
+  server: {
+    headers: {
+      "Access-Control-Allow-Origin": "*", // Or specific origin(s)
+      "Access-Control-Allow-Methods": "GET",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  },
   image: {
     service: {
       entrypoint: 'astro/assets/services/sharp',
       config: imageConfig
-    }
+    },
+    domains: ["assets.luan.family"],
   },
   markdown: {
     shikiConfig: {

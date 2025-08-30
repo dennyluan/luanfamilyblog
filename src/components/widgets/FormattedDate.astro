@@ -8,6 +8,9 @@ const {
   format,
   context = 'default'
 } = Astro.props as FormattedDateProps & { context?: 'list' | 'post' | 'default' }
+
+console.log("HELLO?>>>")
+console.log("date", date)
 ---
 
 <time

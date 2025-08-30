@@ -9,7 +9,8 @@ const images = Astro.props.images;
       return (
         <Picture
           src={image}
-          data-preview=true alt=""
+          alt=""
+          data-preview=true
           formats={['avif', 'webp']}
           layout='constrained'
           width={200}
