@@ -1,14 +1,19 @@
 // src/pages/api/r2-proxy.js
 
+import { getSecret } from "astro:env/server";
+
 export async function GET(context) {
   // Get credentials from environment variables
 
-  const {env} = context.locals.runtime;
+  // const {env} = context.locals.runtime;
+  // eslint-disable-next-line no-undef
   // const { env } = Astro.locals.runtime;
 
   // eslint-disable-next-line no-undef
-  const AWS_ACCESS_KEY = import.meta.env.AWS_ACCESS_KEY || env.AWS_ACCESS_KEY;
-  const AWS_SECRET_KEY = import.meta.env.AWS_SECRET_KEY || env.AWS_SECRET_KEY;
+  // const AWS_ACCESS_KEY = import.meta.env.AWS_ACCESS_KEY || env.AWS_ACCESS_KEY;
+  // const AWS_SECRET_KEY = import.meta.env.AWS_SECRET_KEY || env.AWS_SECRET_KEY;
+  const AWS_ACCESS_KEY = getSecret('AWS_ACCESS_KEY');
+  const AWS_SECRET_KEY = getSecret('AWS_SECRET_KEY');
   const AWS_REGION = 'auto'; // Cloudflare R2 uses 'auto'
   const SERVICE = 's3';
   const BUCKET_URL = 'https://237a43809f6504a9698c74f7644dfcc8.r2.cloudflarestorage.com/luan-assets';
